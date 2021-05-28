@@ -22,11 +22,12 @@ namespace DesafioVaiVoa.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] UsuarioRequest usuarioExterno)
         {
-            if (_cartaoService.SolicitarCartao(usuarioExterno) == false)
+            var cartao = _cartaoService.SolicitarCartao(usuarioExterno);
+            if (cartao == null)
             {
                 return BadRequest();
             }
-            return Ok();
+            return Ok(cartao);
         }
         [Route("{email}")]
         [HttpGet]

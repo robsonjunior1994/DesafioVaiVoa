@@ -18,19 +18,19 @@ namespace DesafioVaiVoa.Service
             _usuarioRepository = usuarioRepository;
             _cartaoRepository = cartaoRepository;
         }
-        public bool SolicitarCartao(UsuarioRequest u)
+        public Cartao SolicitarCartao(UsuarioRequest u)
         {
             Usuario usuario = new Usuario(u.Email);
             if (usuario.EhValido())
             {
                 //_usuarioRepository.Salvar(usuario);
-                GerarCartao(usuario);
-                return true;
+                var cartao = GerarCartao(usuario);
+                return cartao;
             }
 
-            return false;
+            return null;
         }
-        private bool GerarCartao(Usuario u)
+        private Cartao GerarCartao(Usuario u)
         {
             string numeros = GerarNumerosDoCartao();
             Cartao cartao = new Cartao(u.Email, numeros);
@@ -43,9 +43,9 @@ namespace DesafioVaiVoa.Service
                     cartao.Titular = usuario;
                 }
                 _cartaoRepository.Cadastrar(cartao);
-                return true;
+                return cartao;
             }
-            return false;
+            return null;
         }
         private static string GerarNumerosDoCartao()
         {

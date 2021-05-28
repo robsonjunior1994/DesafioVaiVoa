@@ -12,8 +12,8 @@ namespace TesteVaiVoa
     public class TesteServiceCartao
     {
         [Trait("CartaoService", "SolicitarCartao")]
-        [Fact(DisplayName = "Deveria Cadastrar Cartao passando todas informações corretas")]
-        public void DeveriaCadastrarCartaoEretornarTrue()
+        [Fact(DisplayName = "Deveria Cadastrar Cartao passando todas informações corretas e retornar o cartao cadastrado")]
+        public void DeveriaCadastrarCartaoEretornarCartaoCadastrado()
         {
             //Arrange
             var usuarioRepositoryMock = new Mock<IUsuarioRepository>();
@@ -25,7 +25,7 @@ namespace TesteVaiVoa
             var retorno = cartaoService.SolicitarCartao(usuarioRequest);
 
             //Assert
-            Assert.True(retorno);
+            Assert.NotNull(retorno);
 
         }
 

@@ -6,7 +6,7 @@ namespace DesafioVaiVoa.Interface
 {
     public interface ICartaoService
     {
-        bool SolicitarCartao(UsuarioRequest u);
+        Cartao SolicitarCartao(UsuarioRequest u);
         List<Cartao> Buscar(string email);
     }
 }
