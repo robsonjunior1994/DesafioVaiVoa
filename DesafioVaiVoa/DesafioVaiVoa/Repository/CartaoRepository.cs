@@ -1,6 +1,7 @@
 ﻿using DesafioVaiVoa.Interface;
 using DesafioVaiVoa.Models;
 using DesafioVaiVoa.RequestResponse;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace DesafioVaiVoa.Repository
         public List<Cartao> Buscar(int id)
         {
             List<Cartao> cartaos = new List<Cartao>();
-            var listaCompleta =  _aplicativoContext.Cartoes.ToList();
+            var listaCompleta =  _aplicativoContext.Cartoes.Include(t => t.Titular).ToList();
             
             foreach (var cartao in listaCompleta)
             {

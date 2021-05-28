@@ -45,7 +45,6 @@ namespace DesafioVaiVoa.Service
                 _cartaoRepository.Cadastrar(cartao);
                 return true;
             }
-
             return false;
         }
         private static string GerarNumerosDoCartao()
@@ -56,7 +55,6 @@ namespace DesafioVaiVoa.Service
             string numeros = numeros2.ToString() + numeros1.ToString();
             return numeros;
         }
-
         public List<Cartao> Buscar(string email)
         {
             if(string.IsNullOrEmpty(email) == false)
@@ -65,7 +63,6 @@ namespace DesafioVaiVoa.Service
                 List<Cartao> cartoes = _cartaoRepository.Buscar(usuario.Id);
                 return cartoes;
             }
-
             return null;
         }
     }

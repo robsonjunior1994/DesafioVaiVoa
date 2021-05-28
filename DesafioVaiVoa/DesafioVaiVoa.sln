@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioVaiVoa", "DesafioVaiVoa\DesafioVaiVoa.csproj", "{2EF3DF8E-431F-45B0-A270-0319B53B866D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioVaiVoa", "DesafioVaiVoa\DesafioVaiVoa.csproj", "{2EF3DF8E-431F-45B0-A270-0319B53B866D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteVaiVoa", "TesteVaiVoa\TesteVaiVoa.csproj", "{0BF60361-0CCF-4E85-A559-7A9C465C503F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2EF3DF8E-431F-45B0-A270-0319B53B866D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EF3DF8E-431F-45B0-A270-0319B53B866D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EF3DF8E-431F-45B0-A270-0319B53B866D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF60361-0CCF-4E85-A559-7A9C465C503F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF60361-0CCF-4E85-A559-7A9C465C503F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF60361-0CCF-4E85-A559-7A9C465C503F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF60361-0CCF-4E85-A559-7A9C465C503F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
